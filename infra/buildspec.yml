@@ -9,7 +9,7 @@ phases:
       -  sh install.sh
   build:
     commands:
-      - aws cloudformation package --template-file template.yaml --s3-bucket ${ARTIFACT_BUCKET} --output-template-file outputtemplate.yaml
+      - aws cloudformation package --template-file template.yaml --s3-bucket ${ARTIFACT_BUCKET} --output-template-file outputtemplate.yaml --debug
 artifacts:
   files:
-    - outputtemplate.yaml    
+    - outputtemplate.yaml     
