@@ -6,7 +6,7 @@ phases:
   pre_build:
     commands:
       - env    
-      -  sh install.sh
+      - sh install.sh
   build:
     commands:
       - aws cloudformation package --template-file template.yaml --s3-bucket ${ARTIFACT_BUCKET} --output-template-file outputtemplate.yaml --debug
